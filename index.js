@@ -9,7 +9,7 @@ Date: 18/08/2021
 const http = require('http');
 const { handleReqRes } = require('./helpers/handleReqRes');
 const environment = require('./helpers/environments');
-const data = require('./lib/data');
+// const data = require('./lib/data');
 
 // app object - module scaffolding
 const app = {};
@@ -27,9 +27,9 @@ const app = {};
 //     console.log(`error was`, err);
 // });
 
-data.delete('test', 'newFile', (err) => {
-    console.log(err);
-});
+// data.delete('test', 'newFile', (err) => {
+//     console.log(err);
+// });
 
 // configuration
 // app.config = {
