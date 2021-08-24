@@ -175,8 +175,8 @@ handler._users.put = (requestProperties, callback) => {
                             }
 
                             // update data
-                            data.update('users', phone, userData, (err) => {
-                                if (!err) {
+                            data.update('users', phone, userData, (err2) => {
+                                if (!err2) {
                                     callback(200, {
                                         message: 'User was updated successfully!',
                                     });
@@ -227,8 +227,8 @@ handler._users.delete = (requestProperties, callback) => {
                 // lookup the user
                 data.read('users', phone, (err, userData) => {
                     if (!err && userData) {
-                        data.delete('users', phone, (err) => {
-                            if (!err) {
+                        data.delete('users', phone, (err2) => {
+                            if (!err2) {
                                 callback(200, {
                                     message: 'User successfully deleted',
                                 });

@@ -15,6 +15,11 @@ environments.staging = {
     port: 3000,
     envName: 'staging',
     secretKey: 'sijgijdsfghljdkrhhds',
+    twilio: {
+        fromPhone: '+19142186402',
+        AccountSid: 'ACeb29f9c1f349f10045db2f51b9841538',
+        AuthToken: '8904b64160f06339b644320b8a26325a',
+    },
 };
 
 // production environment
@@ -22,6 +27,11 @@ environments.production = {
     port: 5000,
     envName: 'production',
     secretKey: 'sijgijdsfghlrfdyhtyjhds',
+    twilio: {
+        fromPhone: '+19142186402',
+        AccountSid: 'ACeb29f9c1f349f10045db2f51b9841538',
+        AuthToken: '8904b64160f06339b644320b8a26325a',
+    },
 };
 
 // determine which environment was passed

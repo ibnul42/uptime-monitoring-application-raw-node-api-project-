@@ -49,8 +49,8 @@ handler._token.post = (requestProperties, callback) => {
                 };
 
                 // store the token
-                data.create('tokens', tokenId, tokenObject, (err) => {
-                    if (!err) {
+                data.create('tokens', tokenId, tokenObject, (err2) => {
+                    if (!err2) {
                         callback(200, tokenObject);
                     } else {
                         callback(500, {
@@ -113,8 +113,8 @@ handler._token.put = (requestProperties, callback) => {
             if (tokenObject.expires > Date.now()) {
                 tokenObject.expires = Date.now() + 60 * 60 * 1000;
                 // storing the updated token
-                data.update('tokens', id, tokenObject, (err) => {
-                    if (!err) {
+                data.update('tokens', id, tokenObject, (err2) => {
+                    if (!err2) {
                         callback(200);
                     } else {
                         callback(500, {
@@ -146,8 +146,8 @@ handler._token.delete = (requestProperties, callback) => {
         // lookup the user
         data.read('tokens', id, (err, tokenData) => {
             if (!err && tokenData) {
-                data.delete('tokens', id, (err) => {
-                    if (!err) {
+                data.delete('tokens', id, (err2) => {
+                    if (!err2) {
                         callback(200, {
                             message: 'token was successfully deleted',
                         });

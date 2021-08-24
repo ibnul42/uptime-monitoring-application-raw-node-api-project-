@@ -9,6 +9,7 @@ Date: 18/08/2021
 const http = require('http');
 const { handleReqRes } = require('./helpers/handleReqRes');
 const environment = require('./helpers/environments');
+const { sendTwilioSms } = require('./helpers/notifications');
 // const data = require('./lib/data');
 
 // app object - module scaffolding
@@ -35,6 +36,9 @@ const app = {};
 // app.config = {
 //     port: 3000,
 // };
+// sendTwilioSms('01765427688', 'Hello World', (error) => {
+//     console.log(`Error was ${error}`);
+// });
 
 // create Server
 app.createServer = () => {
