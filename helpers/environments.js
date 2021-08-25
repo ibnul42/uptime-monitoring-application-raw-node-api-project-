@@ -15,6 +15,7 @@ environments.staging = {
     port: 3000,
     envName: 'staging',
     secretKey: 'sijgijdsfghljdkrhhds',
+    maxChecks: 5,
     twilio: {
         fromPhone: '+19142186402',
         AccountSid: 'ACeb29f9c1f349f10045db2f51b9841538',
@@ -27,6 +28,7 @@ environments.production = {
     port: 5000,
     envName: 'production',
     secretKey: 'sijgijdsfghlrfdyhtyjhds',
+    maxChecks: 5,
     twilio: {
         fromPhone: '+19142186402',
         AccountSid: 'ACeb29f9c1f349f10045db2f51b9841538',
